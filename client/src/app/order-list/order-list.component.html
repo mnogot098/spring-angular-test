@@ -1,0 +1,22 @@
+
+  <button class="btn btn-success my-4 fw-bold" routerLink="/add-order">+New Order</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">REF</th>
+        <th scope="col">DATE</th>
+        <th scope="col">EDIT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>{{order.reference}}</td>
+        <td>{{order.date}}</td>
+        <td>
+          <button class="btn btn-warning" (click) = "getOrderDetails(order.id)">
+            EDIT
+          </button>
+        </td>
+      </tr> 
+    </tbody>
+  </table>

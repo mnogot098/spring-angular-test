@@ -1,0 +1,26 @@
+
+  <button class="btn btn-success my-4 fw-bold" routerLink="/add-articles">+New aticle</button>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">PRICE</th>
+        <th scope="col">PICTURE</th>
+        <th scope="col">ACTIONS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let article of articles">
+        <td>{{article.name}}</td>
+        <td><span class="badge bg-danger fw-bold">{{article.price}} MAD</span></td>
+        <td>
+          <img src="" alt="not found"/>
+        </td>
+        <td>
+          <button class="btn btn-warning" (click) = "getArticleDetails(article.id)">
+            Details
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

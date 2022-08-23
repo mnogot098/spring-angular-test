@@ -1,0 +1,20 @@
+  <div class="col-md-6 offset-md-2">
+    <h1>New article</h1>
+<form class="row g-3" (ngSubmit)="onSubmit()" method="POST">
+    <div class="col-md-6">
+      <label for="inputEmail4" class="form-label">Article name</label>
+      <input type="text" name="name" [(ngModel)]="article.name" class="form-control">
+    </div>
+    <div class="col-md-6">
+      <label for="inputPassword4" class="form-label">Article Price(MAD)</label>
+      <input type="number" name="price" [(ngModel)]="article.price" class="form-control">
+    </div>
+    <div class="col-12">
+      <label class="form-label">Picture</label>
+      <input type="file" name="picture" accept="image/png, image/jpeg" [(ngModel)]="article.picture" class="form-control">
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-success">Create article</button>
+    </div>
+  </form>
+  </div>

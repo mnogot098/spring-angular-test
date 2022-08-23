@@ -1,0 +1,19 @@
+<h1>Order details</h1>
+<div class="col-sm-12">
+    <li class="list-group-item">REFERENCE:  {{order.reference}}</li>
+    <li class="list-group-item">DATE:  {{order.date}}</li>
+</div>
+<button class="btn btn-success my-4 fw-bold" routerLink="/add-article">+New aticle</button>
+<div class="container">
+    <div class="row mt-4" *ngFor="let article of order.articles">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">ARTICLE NAME:{{article.name}}</h5>
+              <p class="card-text">ARTICLE PRICE: {{article.price}}</p>
+              <div>
+                    <button (click) = "deleteArticleFromOrder(order.id,article.id)" class="btn btn-danger mx-2">Delete</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
